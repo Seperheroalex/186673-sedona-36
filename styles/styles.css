@@ -305,6 +305,7 @@ body {
 }
 
 .search-form {
+  padding: 35px 70px 73px 70px;
   background-color: #90acba;
   background-image: url(../images/catalog-search-background.jpg);
   background-repeat: no-repeat;
@@ -313,11 +314,15 @@ body {
 }
 
 .search-title {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
 }
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -378,11 +383,24 @@ body {
   text-transform: uppercase;
 }
 
+.search-result {
+  width: 1060px;
+  padding: 0 70px;
+}
+
 .search-result-list {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .search-result-item {
+  box-sizing: border-box;
+  width: 340px;
   color: #333333;
 }
 
@@ -431,6 +449,9 @@ body {
 }
 
 .pagination {
+  display: flex;
+  margin:0;
+  padding:0;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
