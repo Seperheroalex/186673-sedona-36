@@ -14,9 +14,27 @@
   font-display: swap;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin: 0;
   font-family: 'PT Sans', sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -24,13 +42,38 @@ body {
   background-color: #F2F2F2;
 }
 
-.page-header {
-  color: #000000;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
+.page-header {
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.index-link {
+  display: block;
+}
+
+.navigation {
+  width: 460px;
+}
+
 .navigation-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.navigation-user {
+  width: 300px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -42,7 +85,6 @@ body {
 }
 
 .favorite-badge {
-  font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
@@ -58,14 +100,25 @@ body {
   color: #FFFFFF;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .welcome {
+  min-height: 485px;
+  margin-bottom: 69px;
   background-color: #293938;
   background-image: url(../images/welcome-background.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 
-.advantages{
+.welcome-sedona {
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages {
   text-align: center;
 }
 
@@ -83,10 +136,17 @@ body {
 }
 
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .advantages-item {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 0 85px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -95,6 +155,7 @@ body {
 }
 
 .advantages-item_blue {
+  width: 1200px;
   background-color: #82B3D3;
   color: #FFFFFF;
 }
@@ -115,10 +176,15 @@ body {
 }
 
 .service {
+  margin-bottom: 96px;
   text-align: center;
 }
 
 .service-list {
+  display: flex;
+  margin-bottom: 96px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -130,12 +196,14 @@ body {
 }
 
 .service-description {
+  margin-top: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
 .service-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -210,6 +278,11 @@ body {
   background-color: #82B3D3;
   color: #FFFFFF;
   border: 0;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-social-list {
